@@ -1,11 +1,16 @@
 <h1 align='center'>EchoMimicV2: Towards Striking, Simplified, and Semi-Body Human Animation</h1>
 
 <div align='center'>
-    <a href='https://github.com/mengrang' target='_blank'>Rang Meng</a><sup></sup>&emsp;
-    <a href='https://github.com/' target='_blank'>Xingyu Zhang</a><sup></sup>&emsp;
-    <a href='https://lymhust.github.io/' target='_blank'>Yuming Li</a><sup></sup>&emsp;
-    <a href='https://github.com/' target='_blank'>Chenguang Ma</a><sup></sup>
+    <a href='https://github.com/mengrang' target='_blank'>Rang Meng</a><sup>1</sup>&emsp;
+    <a href='https://github.com/' target='_blank'>Xingyu Zhang</a>&emsp;
+    <a href='https://lymhust.github.io/' target='_blank'>Yuming Li</a><sup>2</sup>&emsp;
+    <a href='https://github.com/' target='_blank'>Chenguang Ma</a>
 </div>
+
+<p align='center'>
+    <sup>1</sup>Core contributor&emsp;
+    <sup>2</sup>Corresponding author
+</p>
 
 
 <div align='center'>
