@@ -12,7 +12,6 @@
     <sup>2</sup>Corresponding author
 </p>
 
-
 <div align='center'>
 Terminal Technology Department, Alipay, Ant Group.
 </div>
