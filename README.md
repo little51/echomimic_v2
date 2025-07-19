@@ -2,7 +2,6 @@
 
 <div align='center'>
     <a href='https://github.com/mengrang' target='_blank'>Rang Meng</a><sup>1</sup>&emsp;
-    <a href='https://github.com/mengrang' target='_blank'>Rang Meng</a></sup>&emsp;
     <a href='https://github.com/' target='_blank'>Xingyu Zhang</a>&emsp;
     <a href='https://lymhust.github.io/' target='_blank'>Yuming Li</a><sup>2</sup>&emsp;
     <a href='https://github.com/' target='_blank'>Chenguang Ma</a><sup>2</sup>
