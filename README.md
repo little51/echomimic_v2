@@ -7,14 +7,15 @@
     <a href='https://github.com/' target='_blank'>Chenguang Ma</a><sup>2</sup>
 </div>
 
+<div align='center'>
+Terminal Technology Department, Alipay, Ant Group.
+</div>
+
 <p align='center'>
     <sup>1</sup>Core contributor&emsp;
     <sup>2</sup>Corresponding author
 </p>
 
-<div align='center'>
-Terminal Technology Department, Alipay, Ant Group.
-</div>
 <br>
 <div align='center'>
     <a href='https://antgroup.github.io/ai/echomimic_v2/'><img src='https://img.shields.io/badge/Project-Page-blue'></a>
@@ -286,3 +287,4 @@ If you find our work useful for your research, please consider citing the paper 
 
 ## &#x1F31F; Star History
 [![Star History Chart](https://api.star-history.com/svg?repos=antgroup/echomimic_v2&type=Date)](https://star-history.com/#antgroup/echomimic_v2&Date)
+
