@@ -50,26 +50,26 @@ def generate(image_input, audio_input, pose_input, width, height, length, steps,
 
     ############# model_init started #############
     ## vae init
-    vae = AutoencoderKL.from_pretrained("./pretrained_weights/sd-vae-ft-mse").to(device, dtype=dtype)
+    vae = AutoencoderKL.from_pretrained("./models/BadToBest/EchoMimicV2/sd-vae-ft-mse").to(device, dtype=dtype)
     if quantization_input:
         quantize_(vae, int8_weight_only())
         print("使用int8量化")
 
     ## reference net init
-    reference_unet = UNet2DConditionModel.from_pretrained("./pretrained_weights/sd-image-variations-diffusers", subfolder="unet", use_safetensors=False).to(dtype=dtype, device=device)
-    reference_unet.load_state_dict(torch.load("./pretrained_weights/reference_unet.pth", weights_only=True))
+    reference_unet = UNet2DConditionModel.from_pretrained("./models/BadToBest/EchoMimicV2/sd-image-variations-diffusers", subfolder="unet", use_safetensors=False).to(dtype=dtype, device=device)
+    reference_unet.load_state_dict(torch.load("./models/BadToBest/EchoMimicV2/reference_unet.pth", weights_only=True))
     if quantization_input:
         quantize_(reference_unet, int8_weight_only())
 
     ## denoising net init
-    if os.path.exists("./pretrained_weights/motion_module.pth"):
+    if os.path.exists("./models/BadToBest/EchoMimicV2/motion_module.pth"):
         print('using motion module')
     else:
         exit("motion module not found")
         ### stage1 + stage2
     denoising_unet = EMOUNet3DConditionModel.from_pretrained_2d(
-        "./pretrained_weights/sd-image-variations-diffusers",
-        "./pretrained_weights/motion_module.pth",
+        "./models/BadToBest/EchoMimicV2/sd-image-variations-diffusers",
+        "./models/BadToBest/EchoMimicV2/motion_module.pth",
         subfolder="unet",
         unet_additional_kwargs = {
             "use_inflated_groupnorm": True,
@@ -99,14 +99,14 @@ def generate(image_input, audio_input, pose_input, width, height, length, steps,
             }
         },
     ).to(dtype=dtype, device=device)
-    denoising_unet.load_state_dict(torch.load("./pretrained_weights/denoising_unet.pth", weights_only=True),strict=False)
+    denoising_unet.load_state_dict(torch.load("./models/BadToBest/EchoMimicV2/denoising_unet.pth", weights_only=True),strict=False)
 
     # pose net init
     pose_net = PoseEncoder(320, conditioning_channels=3, block_out_channels=(16, 32, 96, 256)).to(dtype=dtype, device=device)
-    pose_net.load_state_dict(torch.load("./pretrained_weights/pose_encoder.pth", weights_only=True))
+    pose_net.load_state_dict(torch.load("./models/BadToBest/EchoMimicV2/pose_encoder.pth", weights_only=True))
 
     ### load audio processor params
-    audio_processor = load_audio_model(model_path="./pretrained_weights/audio_processor/tiny.pt", device=device)
+    audio_processor = load_audio_model(model_path="./models/BadToBest/EchoMimicV2/audio_processor/tiny.pt", device=device)
    
     ############# model_init finished #############
     sched_kwargs = {
@@ -274,4 +274,4 @@ with gr.Blocks(theme=gr.themes.Soft()) as demo:
 
 if __name__ == "__main__":
     demo.queue()
-    demo.launch(inbrowser=True)
+    demo.launch(inbrowser=True,server_name="0.0.0.0")
