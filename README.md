@@ -4,7 +4,7 @@
     <a href='https://github.com/mengrang' target='_blank'>Rang Meng</a><sup>1</sup>&emsp;
     <a href='https://github.com/' target='_blank'>Xingyu Zhang</a>&emsp;
     <a href='https://lymhust.github.io/' target='_blank'>Yuming Li</a><sup>2</sup>&emsp;
-    <a href='https://github.com/' target='_blank'>Chenguang Ma</a><sup>2</sup>
+    <a href='https://openreview.net/profile?id=~Chenguang_Ma3' target='_blank'>Chenguang Ma</a><sup>2</sup>
 </div>
 
 <div align='center'>
@@ -285,5 +285,6 @@ If you find our work useful for your research, please consider citing the paper 
 
 ## &#x1F31F; Star History
 [![Star History Chart](https://api.star-history.com/svg?repos=antgroup/echomimic_v2&type=Date)](https://star-history.com/#antgroup/echomimic_v2&Date)
+
 
 
