@@ -36,3 +36,4 @@ huggingface_hub==0.26.2
 mediapipe==0.10.21
 torchao==0.9.0
 pydantic==2.10.6
+chattts==0.2.4
